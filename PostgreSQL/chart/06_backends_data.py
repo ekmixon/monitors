@@ -16,7 +16,10 @@ label = []
 
 for db in databases.Rows:
     data.append(db["numbackends"])
-    color.append("rgb(" + str(randint(125, 225)) + "," + str(randint(125, 225)) + "," + str(randint(125, 225)) + ")")
+    color.append(
+        f"rgb({str(randint(125, 225))},{str(randint(125, 225))},{str(randint(125, 225))})"
+    )
+
     label.append(db["datname"])
 
 result = {

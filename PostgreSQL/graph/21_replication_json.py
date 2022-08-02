@@ -4,10 +4,7 @@ result = {
     "container": None,
     "boxSelectionEnabled": False,
     "autounselectify": True,
-    "layout": {
-        "name": "spread",
-        "minDist": 1000
-    },
+    "layout": {"name": "spread", "minDist": 1000},
     "style": [
         {
             "selector": "node",
@@ -19,21 +16,21 @@ result = {
                 "text-wrap": "wrap",
                 "color": "gray",
                 "text-rotation": "autorotate",
-                "font-size": 12
-            }
+                "font-size": 12,
+            },
         },
         {
             "selector": "node.node_local",
             "style": {
-                "background-color": "rgb(" + str(randint(125, 225)) + "," + str(randint(125, 225)) + "," + str(randint(125, 225)) + ")",
-                "shape": 'square'
-            }
+                "background-color": f"rgb({str(randint(125, 225))},{str(randint(125, 225))},{str(randint(125, 225))})",
+                "shape": 'square',
+            },
         },
         {
             "selector": "node.node_remote",
             "style": {
-                "background-color": "rgb(" + str(randint(125, 225)) + "," + str(randint(125, 225)) + "," + str(randint(125, 225)) + ")",
-            }
+                "background-color": f"rgb({str(randint(125, 225))},{str(randint(125, 225))},{str(randint(125, 225))})"
+            },
         },
         {
             "selector": "edge",
@@ -50,12 +47,9 @@ result = {
                 "width": 1,
                 "color": "gray",
                 "text-outline-color": 'gray',
-                "text-outline-width": 0
-            }
-        }
+                "text-outline-width": 0,
+            },
+        },
     ],
-    "elements": {
-        "nodes": None,
-        "edges": None
-    }
+    "elements": {"nodes": None, "edges": None},
 }

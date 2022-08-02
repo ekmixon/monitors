@@ -17,7 +17,8 @@ datasets = []
 for cpu in cpu_data.Rows:
     if cpu!='':
         cpu_split = cpu[0].split(' ')
-        color = "rgb(" + str(randint(125, 225)) + "," + str(randint(125, 225)) + "," + str(randint(125, 225)) + ")"
+        color = f"rgb({str(randint(125, 225))},{str(randint(125, 225))},{str(randint(125, 225))})"
+
         datasets.append({
             "label": cpu_split[0],
             "fill": False,

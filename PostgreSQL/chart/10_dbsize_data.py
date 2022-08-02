@@ -14,7 +14,10 @@ label = []
 
 for db in databases.Rows:
     data.append(db["size"])
-    color.append("rgb(" + str(randint(125, 225)) + "," + str(randint(125, 225)) + "," + str(randint(125, 225)) + ")")
+    color.append(
+        f"rgb({str(randint(125, 225))},{str(randint(125, 225))},{str(randint(125, 225))})"
+    )
+
     label.append(db["datname"])
 
 total_size = connection.ExecuteScalar('''
@@ -26,11 +29,7 @@ total_size = connection.ExecuteScalar('''
 result = {
     "labels": label,
     "datasets": [
-        {
-            "data": data,
-            "backgroundColor": color,
-            "label": "Dataset 1"
-        }
+        {"data": data, "backgroundColor": color, "label": "Dataset 1"}
     ],
-    "title": "Database Size (Total: " + str(total_size) + " MB)"
+    "title": f"Database Size (Total: {str(total_size)} MB)",
 }

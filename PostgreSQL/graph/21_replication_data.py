@@ -1,7 +1,6 @@
 from datetime import datetime
 from random import randint
 
-nodes = []
 edges = []
 
 try:
@@ -20,13 +19,15 @@ except:
 if len(repl_nodes.Rows) == 0:
     raise Exception('There are no nodes replicating from this instance.')
 
-nodes.append({
-            "data": {
-                "id": 'local',
-                "label": 'local',
-            },
-            "classes": 'node_local'
-        })
+nodes = [
+    {
+        "data": {
+            "id": 'local',
+            "label": 'local',
+        },
+        "classes": 'node_local',
+    }
+]
 
 for repl_node in repl_nodes.Rows:
     nodes.append({

@@ -5,9 +5,9 @@ result = {
     "data": None,
     "options": {
         "responsive": True,
-        "title":{
-            "display":True,
-            "text":"Backends (max_connections: " + str(max_connections) + ")"
-        }
-    }
+        "title": {
+            "display": True,
+            "text": f"Backends (max_connections: {str(max_connections)})",
+        },
+    },
 }

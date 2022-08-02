@@ -13,14 +13,15 @@ except:
 if mem_data is None:
     raise Exception('This chart can only be executed in a Linux server.')
 
-datasets = []
 mem_split = mem_data.split(' ')
 total_mem = mem_split[0]
 used_mem = mem_split[1]
 free_mem = mem_split[2]
 perc_mem = round(int(used_mem)*100/int(total_mem),2)
-color = "rgb(" + str(randint(125, 225)) + "," + str(randint(125, 225)) + "," + str(randint(125, 225)) + ")"
-datasets.append({
+color = f"rgb({str(randint(125, 225))},{str(randint(125, 225))},{str(randint(125, 225))})"
+
+datasets = [
+    {
         "label": "Memory",
         "fill": False,
         "backgroundColor": color,
@@ -28,8 +29,9 @@ datasets.append({
         "lineTension": 0,
         "pointRadius": 1,
         "borderWidth": 1,
-        "data": [perc_mem]
-    })
+        "data": [perc_mem],
+    }
+]
 
 result = {
     "labels": [datetime.now().strftime('%H:%M:%S')],

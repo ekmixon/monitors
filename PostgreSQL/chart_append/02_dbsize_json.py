@@ -9,33 +9,28 @@ result = {
     "data": None,
     "options": {
         "responsive": True,
-        "title":{
-            "display":True,
-            "text":"Database Size (Total: " + str(total_size) + " MB)"
+        "title": {
+            "display": True,
+            "text": f"Database Size (Total: {str(total_size)} MB)",
         },
-        "tooltips": {
-            "mode": "index",
-            "intersect": False
-        },
-        "hover": {
-            "mode": "nearest",
-            "intersect": True
-        },
+        "tooltips": {"mode": "index", "intersect": False},
+        "hover": {"mode": "nearest", "intersect": True},
         "scales": {
-            "xAxes": [{
-                "display": True,
-                "scaleLabel": {
+            "xAxes": [
+                {
                     "display": True,
-                    "labelString": "Time"
+                    "scaleLabel": {"display": True, "labelString": "Time"},
                 }
-            }],
-            "yAxes": [{
-                "display": True,
-                "scaleLabel": {
+            ],
+            "yAxes": [
+                {
                     "display": True,
-                    "labelString": "Size (MB)"
+                    "scaleLabel": {
+                        "display": True,
+                        "labelString": "Size (MB)",
+                    },
                 }
-            }]
-        }
-    }
+            ],
+        },
+    },
 }

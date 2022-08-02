@@ -18,7 +18,8 @@ replags = connection.Query('''
 
 datasets = []
 for replag in replags.Rows:
-    color = "rgb(" + str(randint(125, 225)) + "," + str(randint(125, 225)) + "," + str(randint(125, 225)) + ")"
+    color = f"rgb({str(randint(125, 225))},{str(randint(125, 225))},{str(randint(125, 225))})"
+
     datasets.append({
             "label": "Lag",
             "fill": False,

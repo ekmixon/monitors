@@ -5,37 +5,29 @@ result = {
     "data": None,
     "options": {
         "responsive": True,
-        "title":{
-            "display":True,
-            "text":"Backends (max_connections: " + str(max_connections) + ")"
+        "title": {
+            "display": True,
+            "text": f"Backends (max_connections: {str(max_connections)})",
         },
-        "tooltips": {
-            "mode": "index",
-            "intersect": False
-        },
-        "hover": {
-            "mode": "nearest",
-            "intersect": True
-        },
+        "tooltips": {"mode": "index", "intersect": False},
+        "hover": {"mode": "nearest", "intersect": True},
         "scales": {
-            "xAxes": [{
-                "display": True,
-                "scaleLabel": {
+            "xAxes": [
+                {
                     "display": True,
-                    "labelString": "Time"
+                    "scaleLabel": {"display": True, "labelString": "Time"},
                 }
-            }],
-            "yAxes": [{
-                "display": True,
-                "scaleLabel": {
+            ],
+            "yAxes": [
+                {
                     "display": True,
-                    "labelString": "Value"
-                },
-                "ticks": {
-                    "beginAtZero": True,
-                    "max": int(max_connections)
+                    "scaleLabel": {"display": True, "labelString": "Value"},
+                    "ticks": {
+                        "beginAtZero": True,
+                        "max": int(max_connections),
+                    },
                 }
-            }]
-        }
-    }
+            ],
+        },
+    },
 }

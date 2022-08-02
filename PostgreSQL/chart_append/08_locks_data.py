@@ -10,7 +10,8 @@ locks = connection.Query('''
 
 datasets = []
 for lock in locks.Rows:
-    color = "rgb(" + str(randint(125, 225)) + "," + str(randint(125, 225)) + "," + str(randint(125, 225)) + ")"
+    color = f"rgb({str(randint(125, 225))},{str(randint(125, 225))},{str(randint(125, 225))})"
+
     datasets.append({
             "label": lock['mode'],
             "fill": False,

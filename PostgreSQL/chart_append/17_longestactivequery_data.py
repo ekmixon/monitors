@@ -11,9 +11,10 @@ duration = connection.ExecuteScalar('''
     LIMIT 1
 ''')
 
-datasets = []
-color = "rgb(" + str(randint(125, 225)) + "," + str(randint(125, 225)) + "," + str(randint(125, 225)) + ")"
-datasets.append({
+color = f"rgb({str(randint(125, 225))},{str(randint(125, 225))},{str(randint(125, 225))})"
+
+datasets = [
+    {
         "label": 'Query',
         "fill": False,
         "backgroundColor": color,
@@ -21,8 +22,9 @@ datasets.append({
         "lineTension": 0,
         "pointRadius": 1,
         "borderWidth": 1,
-        "data": [duration]
-    })
+        "data": [duration],
+    }
+]
 
 result = {
     "labels": [datetime.now().strftime('%H:%M:%S')],

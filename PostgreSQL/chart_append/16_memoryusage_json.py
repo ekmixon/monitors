@@ -3,37 +3,29 @@ result = {
     "data": None,
     "options": {
         "responsive": True,
-        "title":{
-            "display":True,
-            "text":"System Memory Usage (Total: " + total_mem + "MB)"
+        "title": {
+            "display": True,
+            "text": f"System Memory Usage (Total: {total_mem}MB)",
         },
-        "tooltips": {
-            "mode": "index",
-            "intersect": False
-        },
-        "hover": {
-            "mode": "nearest",
-            "intersect": True
-        },
+        "tooltips": {"mode": "index", "intersect": False},
+        "hover": {"mode": "nearest", "intersect": True},
         "scales": {
-            "xAxes": [{
-                "display": True,
-                "scaleLabel": {
+            "xAxes": [
+                {
                     "display": True,
-                    "labelString": "Time"
+                    "scaleLabel": {"display": True, "labelString": "Time"},
                 }
-            }],
-            "yAxes": [{
-                "display": True,
-                "scaleLabel": {
+            ],
+            "yAxes": [
+                {
                     "display": True,
-                    "labelString": "%",
-                },
-                "ticks": {
-                    "beginAtZero": True,
-                    "max": 100
+                    "scaleLabel": {
+                        "display": True,
+                        "labelString": "%",
+                    },
+                    "ticks": {"beginAtZero": True, "max": 100},
                 }
-            }]
-        }
-    }
+            ],
+        },
+    },
 }

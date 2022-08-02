@@ -59,7 +59,8 @@ tables = connection.Query('''
 
 datasets = []
 for table in tables.Rows:
-    color = "rgb(" + str(randint(125, 225)) + "," + str(randint(125, 225)) + "," + str(randint(125, 225)) + ")"
+    color = f"rgb({str(randint(125, 225))},{str(randint(125, 225))},{str(randint(125, 225))})"
+
     datasets.append({
             "label": table['relation'],
             "fill": False,

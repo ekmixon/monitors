@@ -12,7 +12,8 @@ databases = connection.Query('''
 
 datasets = []
 for db in databases.Rows:
-    color = "rgb(" + str(randint(125, 225)) + "," + str(randint(125, 225)) + "," + str(randint(125, 225)) + ")"
+    color = f"rgb({str(randint(125, 225))},{str(randint(125, 225))},{str(randint(125, 225))})"
+
     datasets.append({
             "label": db['datname'],
             "fill": False,
